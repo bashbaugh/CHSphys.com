@@ -1,0 +1,112 @@
+body {
+	  /* The image used */
+	background-color: white;
+/*  	background-image: url("/images/chsphysicspattern.png");
+*/  height: 100%;
+  	padding: 0px;
+	margin: 0 auto;
+	z-index: -1;
+	min-width: 520px;
+	max-width: 2000px;
+  /* Full height */
+
+  /* Center and scale the image nicely */
+  background-repeat: repeat-x;
+
+}
+
+header {
+	height: 100px;
+}
+
+a:visited, a:active {
+	color: blue;
+}
+
+#main-wrap {
+	padding: 10px;
+	min-height: 100%;
+	margin-bottom: -50px;
+}
+
+#main h2 {
+	color: #03c2fc;
+	font-size: 24px;
+}
+
+#main h3 {
+	text-decoration: underline;
+}
+
+#main ul {
+	list-style-type: none;
+}
+
+#main hr {
+	border: 1px solid black;
+}
+
+#main table, #main table td {
+  border: none;
+  border-collapse: collapse;
+}
+
+#main table td p {
+  line-height: 22px;
+}
+
+#main table td {
+	padding-left: 4px;
+	vertical-align: top;
+}
+
+#main #floatrightwithwidth {
+	width: 40%;
+}
+
+#main #datasets-table, #main #datasets-table td {
+	border: 1px solid black;
+}
+
+#main #even-split-table td {
+	width: 33%;
+	padding: 5px;
+}
+
+#main #even-split-table td #float {
+	width: 35%;
+	height: 35%;
+	float: left;
+	padding: 10px;
+}
+
+/*#main #even-split-table h3 {
+	text-align: center;
+}*/
+
+
+
+/*nav img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100px;
+	width: 833px;
+}
+
+
+
+/*#main {
+	background-color: white;
+	width: 95%;
+	height: 80%;
+	float: left;
+
+}*/
+
+@media screen and (max-width: 725px) {
+#main table {
+	display: block;
+}
+
+}
