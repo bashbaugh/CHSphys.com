@@ -105,7 +105,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c4388', end
   display: none;
   height: 15px;
   width: 45px;
-  background-image: url("/images/sandwich.png");
+  background-image: url("/phpVersion/imagession/images/sandwich.png");
 }
 
 @media screen and (max-width: 725px) {
