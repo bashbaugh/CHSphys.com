@@ -1,0 +1,65 @@
+/*
+ * Stylesheet for chsphys.com
+ * By Benjamin Ashbaugh & Monty King
+ */
+
+/* Navigation */
+a {
+    color: #ff7700;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 30px;
+    border-bottom: 1px solid black;
+    user-select: none;
+}
+
+nav .name {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: black;
+    text-decoration: none; /* Remove default underline */
+}
+
+nav .button {
+    font-family: 'Open Sans', sans-serif;
+    float: right;
+    padding: 2px;
+    margin: 0px 8px;
+    color: black;
+    text-decoration: none; /* Remove default underline */
+    border-bottom: 1px solid black;
+}
+
+/* Layout */
+.page-container {
+    width: 80%;
+    margin: 100px auto 0;
+}
+
+.centered-content {
+    text-align: center;
+    width: 60%;
+    margin: 20px auto;
+}
+
+/* Content */
+.page-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+
+    text-align: justify;
+    text-justify: inter-word;
+}

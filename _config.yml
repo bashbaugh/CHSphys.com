@@ -17,3 +17,5 @@ exclude:
  - Gemfile.lock
  - bundle/
  - phpVersion
+ - README.md
+ - scripts
