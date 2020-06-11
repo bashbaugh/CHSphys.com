@@ -1,4 +1,4 @@
-<!-- Default Layout Start -->
+<!-- Content Layout Start -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,10 +12,12 @@
 <div class="page-container">
     <div class="centered-content">
         <h2 class="page-title">{{ page.title }}</h2>
-        {{ page.content | markdownify }}
+        <div class="justify-text">
+            {{ page.content | markdownify }}
+        </div>
     </div>
 </div>
 </body>
 </html>
 
-<!-- Default Layout End -->
+<!-- Content Layout End -->
