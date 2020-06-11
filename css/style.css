@@ -42,7 +42,7 @@ nav .button {
     text-decoration: none; /* Remove default underline */
     border-bottom: 1px solid black;
 }
-4
+
 nav .button:hover {
     border-bottom: 2px solid black;
     padding: 1px 2px; /* Reduce padding height so the navbar bottom border isn't pushed down */
