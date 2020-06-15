@@ -8,6 +8,11 @@ body {
     padding: 0;
 }
 
+.page {
+    position: relative;
+    min-height: 100vh;
+}
+
 /* Navigation */
 a {
     color: #ff7700;
@@ -52,6 +57,7 @@ nav .button:hover {
 .page-container {
     width: 80%;
     margin: 100px auto 0;
+    padding-bottom: 100px; /* Space for footer */
 }
 
 .centered-content {
@@ -111,4 +117,30 @@ p {
 .justify-text {
     text-align: justify;
     text-justify: inter-word;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: #efefef;
+}
+
+footer .columns {
+    display: flex;
+}
+
+footer .columns > div {
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 0.9em;
+    padding: 15px;
+}
+
+footer .columns a {
+    display: block;
+    padding: 2px;
 }
