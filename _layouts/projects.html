@@ -10,7 +10,7 @@
 <div class="page">
     {% include nav.html %}
 
-    <div class="page-container">
+    <div class="page-container" id="vanta-background">
         <div class="centered-content">
             <h2 class="page-title">Our Projects</h2>
             <div>
@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="project-grid">
-            <!-- Iterate through each project in _projects_collection and add the project card, and project description pop-up -->
+            <!-- Iterate through each project in _projects_collection and add the project card -->
             {% assign projects = (site.projects_collection | sort: 'date_added') | reverse %}
             {% for project in projects %}
             {% if project.visible != false %}
@@ -26,15 +26,39 @@
                 <div>
                     <h3>{{ project.title }}</h3>
                     <h6>{{ project.when }}</h6>
+                    {% if project.image %}
+                    <img src="{{ project.image }}" />
+                    {% endif %}
                     <p>{{ project.summary }}</p>
                 </div>
             </a>
             {% endif %}
             {% endfor %}
         </div>
-    </div>
 
-    {% include footer.html %}}
+        <a href="#" id="fullscreen-overlay"></a>
+
+        <!-- Iterate through each project in _projects_collection and add the project description pop-up -->
+        {% assign projects = (site.projects_collection | sort: 'date_added') | reverse %}
+        {% for project in projects %}
+        {% if project.visible != false %}
+        <div id="{{ project.hash }}-proj" class="project-description">
+            <a href="#" class="close-button-x">close</a>
+            {% if project.link %}
+            <a href="{{ project.link }}" target="_blank"><h2>{{ project.title }}</h2></a>
+            {% else %}
+            <h2>{{ project.title }}</h2>
+            {% endif %}
+            <p>When: {{ project.when }}</p>
+            {{ project.content | markdownify }}
+        </div>
+        {% endif %}
+        {% endfor %}
+
+    </div>
+    {% include js.html %}
+
+    {% include footer.html %}
 </div>
 </body>
 </html>

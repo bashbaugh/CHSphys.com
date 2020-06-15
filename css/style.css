@@ -65,6 +65,11 @@ nav .button:hover {
     width: 60%;
     margin: 20px auto;
 }
+@media (max-width: 700px) {
+    .centered-content {
+        width: 95%;
+    }
+}
 
 .header-image {
     z-index: -100;
@@ -111,7 +116,13 @@ nav .button:hover {
 
 p {
     font-family: 'Open Sans', sans-serif;
-    line-height: 1.5;
+    line-height: 1.8;
+}
+
+img {
+    border-radius: 3px;
+    width: 90%;
+    margin: 20px auto;
 }
 
 .justify-text {
@@ -119,11 +130,17 @@ p {
     text-justify: inter-word;
 }
 
-/* Project Grid & Cards */
+.form-iframe {
+    margin: 50px 0;
+    width: 100%;
+}
+
+/* Project Grid, Cards, and Description pop-up */
 .project-grid {
     display: grid;
     grid-gap: 30px 15px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .project-card {
@@ -151,6 +168,58 @@ p {
     font-size: 0.8em;
     font-weight: 600;
     margin: 5px;
+}
+
+.project-card img {
+    border-radius: 5px;
+    width: 90%;
+    margin: 10px auto;
+}
+
+#fullscreen-overlay {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    cursor: default;
+}
+
+.dark-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.project-description {
+    font-family: 'Open Sans', sans-serif;
+    z-index: 100;
+    position: fixed;
+    top: 50px;
+    bottom: 50px;
+    overflow-y: scroll;
+    width: 70%;
+    left: 15%;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #b3b3b3;
+    display: none;
+}
+
+.close-button-x {
+    display: block;
+    text-align: left;
+    cursor: pointer;
+    color: #828282;
+    font-size: 1em;
+    text-decoration: none;
+    margin: 0;
+}
+
+.close-button-x:before {
+    content: '\2190';
+    font-size: 2em;
 }
 
 /* Footer */

@@ -20,6 +20,7 @@ The `_projects_collection` folder contains a markdown file with metadata, a desc
 | Key | Value |
 |------|---------|
 | title | The name of the project|
+| link | (optional, url) If this is set, the title of the project description will be converted to a link to this address.
 | hash | (string, no spaces) The name which will be shown in the project url. For example, with the hash "someproject" the URL will be `/projects#someproject` |
 | image | The image URL to be displayed on the project card |
 | when | (string) The time frame of the project, such as "Fall 2020"|
