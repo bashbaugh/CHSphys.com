@@ -13,9 +13,24 @@
     <div class="page-container">
         <div class="centered-content">
             <h2 class="page-title">Our Projects</h2>
-            <div class="justify-text">
+            <div>
                 {{ page.content | markdownify }}
             </div>
+        </div>
+        <div class="project-grid">
+            <!-- Iterate through each project in _projects_collection and add the project card, and project description pop-up -->
+            {% assign projects = (site.projects_collection | sort: 'date_added') | reverse %}
+            {% for project in projects %}
+            {% if project.visible != false %}
+            <a href="#{{ project.hash }}" class="project-card">
+                <div>
+                    <h3>{{ project.title }}</h3>
+                    <h6>{{ project.when }}</h6>
+                    <p>{{ project.summary }}</p>
+                </div>
+            </a>
+            {% endif %}
+            {% endfor %}
         </div>
     </div>
 

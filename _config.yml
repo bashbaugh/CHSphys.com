@@ -1,13 +1,18 @@
-title: Your awesome title
+######### SITE INFORMATION ##########
+
+title: Centaurus Physics Club
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  aaa
 baseurl: "" # the subpath of your site
 url: "https://chsphysics.com"
 
 # Exclude from processing.
-# The following items will not be processed, by default.
+# These files won't be included in site
+
+######### SITE BUILD SETTINGS & CONFIG #########
+
+collections:
+ - projects_collection
 
 exclude:
  - .sass-cache/
