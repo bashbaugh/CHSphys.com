@@ -10,20 +10,25 @@
 <div class="page">
     {% include nav.html %}
 
-    <div class="page-container">
+    <div class="page-container {{ page.content_classes }}">
+        {% if page.subnav %}
+        <div class="subnav">
+            <h5>Scroll to:</h5>
+            {% for link in page.subnav %}
+            <a href="#{{ link.heading }}">{{ link.title }}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
         <div class="centered-content">
             <h2 class="page-title">{{ page.title }}</h2>
-            <div
-                    {% if page.no_justify != true %}
-                    class="justify-text"
-                    {% endif %}>
+            <div class="{% if page.no_justify != true %}justify-text{% endif %}">
                 {{ page.content | markdownify }}
             </div>
         </div>
     </div>
     {% include js.html %}
 
-    {% include footer.html %}}
+    {% include footer.html %}
 </div>
 </body>
 </html>

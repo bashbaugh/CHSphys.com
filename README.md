@@ -32,5 +32,14 @@ The content of each project file should be markdown.
 
 ### Layouts
 
-+ **content** - this is the default layout for markdown content. Contents are markdownified, centered and justified. Disable justification with `no_justify: true` in front matter. Set `title` to add a header title to page and set tab title.
++ **content** - this is the default layout for markdown content. Contents are markdownified, centered and justified. 
+    + Disable justification with `no_justify: true` in front matter. 
+    + Set `title` to add a header title to page and set tab title.
+    + Set the `subnav` mapping to add a sidebar with anchor links to headings on the page, like this:
+        ```yaml
+        subnav:
+         - title: Section 1
+         - heading: section-1
+        ```
+     + Set `contact_classes` with space seperated classes for content div
 + **default** - Plain HTML with navbar and footer

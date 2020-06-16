@@ -9,6 +9,15 @@ title: Contact Us
     <p>Complete the form below to contact us.</p>
     <form>
         <div>
+            <select name="recipient">
+                <option value="all" disabled selected>Who is this message for?</option>
+                <option value="all">Everyone in Physics Club</option>
+                <option value="sponsor">Teacher Sponsor & Administrator (Ms. Becker)</option>
+                <option value="presidents">Co-presidents (Noah, Jeremy, & Megan)</option>
+                <option value="webmaster">Website developers (Benjamin & Monty)</option>
+            </select>
+        </div>
+        <div>
             <input type="text" name="name" placeholder="Your Name" required />
         </div>
         <div>

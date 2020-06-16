@@ -1,9 +1,10 @@
 <!-- Vanta background-->
 <script src="/js/three.r95.min.js"></script>
 <script src="/js/vanta.globe.min.js"></script>
+<script src="/js/vanta.dots.min.js"></script>
 <script>
     VANTA.GLOBE({
-        el: "#vanta-background",
+        el: ".vanta-globe",
         mouseControls: true,
         touchControls: true,
         minHeight: 50.00,
@@ -15,6 +16,20 @@
         size: 0.5,
         backgroundColor: 0xffffff,
         backgroundAlpha: 0
+    })
+    VANTA.DOTS({
+        el: ".vanta-dots",
+        mouseControls: true,
+        touchControls: true,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x65f7,
+        color2: 0xb3b3b3,
+        backgroundColor: 0xffffff,
+        size: 3,
+        spacing: 26.00
     })
 </script>
 <!--End Vanta background-->
