@@ -13,7 +13,10 @@
     <div class="page-container">
         <div class="centered-content">
             <h2 class="page-title">{{ page.title }}</h2>
-            <div class="justify-text">
+            <div
+                    {% if page.no_justify != true %}
+                    class="justify-text"
+                    {% endif %}>
                 {{ page.content | markdownify }}
             </div>
         </div>

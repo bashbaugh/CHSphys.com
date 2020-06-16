@@ -29,3 +29,8 @@ The `_projects_collection` folder contains a markdown file with metadata, a desc
 | visible | optional - if  set to false, the project will not be shown |
 
 The content of each project file should be markdown.
+
+### Layouts
+
++ **content** - this is the default layout for markdown content. Contents are markdownified, centered and justified. Disable justification with `no_justify: true` in front matter. Set `title` to add a header title to page and set tab title.
++ **default** - Plain HTML with navbar and footer

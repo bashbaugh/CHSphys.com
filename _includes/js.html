@@ -36,7 +36,6 @@
     function openProjectDescription() {
         closeProjectDescription()
         currentProject = location.hash.substr(1) // Get the page hash
-        console.log(currentProject)
         if (currentProject) { // Set the page as active
             document.getElementById(currentProject + '-proj').classList.remove("scale-out-center")
             document.getElementById(currentProject + '-proj').classList.add("scale-in-center")
