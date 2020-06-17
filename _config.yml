@@ -14,6 +14,9 @@ url: "https://chsphysics.com"
 collections:
  - projects_collection
 
+sass:
+  style: compressed
+
 exclude:
  - .sass-cache/
  - .jekyll-cache/
