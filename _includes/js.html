@@ -1,0 +1,81 @@
+<!-- Vanta background-->
+<script src="/js/three.r95.min.js"></script>
+<script src="/js/vanta.globe.min.js"></script>
+<script src="/js/vanta.dots.min.js"></script>
+<script>
+    VANTA.GLOBE({
+        el: ".vanta-globe",
+        mouseControls: true,
+        touchControls: true,
+        minHeight: 50.00,
+        minWidth: 50.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x1eff,
+        color2: 0x0,
+        size: 0.5,
+        backgroundColor: 0xffffff,
+        backgroundAlpha: 0
+    })
+    VANTA.DOTS({
+        el: ".vanta-dots",
+        mouseControls: true,
+        touchControls: true,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x65f7,
+        color2: 0xb3b3b3,
+        backgroundColor: 0xffffff,
+        size: 3,
+        spacing: 26.00
+    })
+</script>
+<!--End Vanta background-->
+
+{% if page.layout == "projects" %}
+<!-- Project description open/close -->
+<script>
+    let currentProject = null
+
+    function closeProjectDescription() {
+        if (currentProject) {
+            document.getElementById(currentProject + '-proj').classList.remove("scale-in-center")
+            document.getElementById(currentProject + '-proj').classList.add("scale-out-center")
+
+            document.getElementById("fullscreen-overlay").classList.remove("dark-overlay")
+        }
+    }
+
+    function openProjectDescription() {
+        closeProjectDescription()
+        currentProject = location.hash.substr(1) // Get the page hash
+        if (currentProject) { // Set the page as active
+            document.getElementById(currentProject + '-proj').classList.remove("scale-out-center")
+            document.getElementById(currentProject + '-proj').classList.add("scale-in-center")
+
+            document.getElementById("fullscreen-overlay").classList.add("dark-overlay")
+        }
+    }
+
+    window.onhashchange = openProjectDescription
+
+    openProjectDescription()
+</script>
+<!--End Project description open/close-->
+{% endif %}
+
+<!--Adjust iframe height-->
+<script>
+    function adjustIframeHeight(iframe) {
+        // DOESN'T WORK IN CHROME AGHHHH
+        if (iframe) {
+            let iframeWindow = iframe.contentWindow || iframe.contentDocument.parentWindow
+            if (iframeWindow.document.body) {
+                iframe.height = iframeWindow.document.documentElement.scrollHeight + "px" || iframeWindow.document.body.scrollHeight + "px"
+            }
+        }
+    }
+</script>
+<!--End adjust Iframe height-->

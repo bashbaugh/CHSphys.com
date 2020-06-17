@@ -1,0 +1,31 @@
+<!-- Index Layout Start -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+</head>
+
+<body>
+<div class="page">
+    {% include nav.html %}
+
+    <div class="header-image">
+        <div class="header-text">
+            <h1>Welcome to Centaurus High School Physics Club!</h1>
+            <p>We are a group of students sharing our love of physics by participating in competitions and doing projects together.</p>
+            <a href="/join">Centaurus Students: Join Physics Club!</a>
+        </div>
+    </div>
+
+    <div class="page-container">
+        {{ page.content | markdownify }}
+    </div>
+    {% include js.html %}
+
+    {% include footer.html %}}
+</div>
+</body>
+</html>
+
+<!-- Index Layout End -->

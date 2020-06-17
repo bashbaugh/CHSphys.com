@@ -1,0 +1,23 @@
+<!-- Default Layout Start -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include head.html %}
+</head>
+
+<body>
+<div class="page">
+    {% include nav.html %}
+
+    <div class="page-container">
+        {{ page.content }}
+    </div>
+    {% include js.html %}
+
+    {% include footer.html %}}
+</div>
+</body>
+</html>
+
+<!-- Default Layout End -->

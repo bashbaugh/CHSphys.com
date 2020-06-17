@@ -1,0 +1,33 @@
+---
+permalink: /contact
+layout: default
+title: Contact Us
+---
+
+<div class="centered-content">
+    <h2 class="page-title">Contact Us</h2>
+    <p>Complete the form below to contact us.</p>
+    <form>
+        <div>
+            <select name="recipient">
+                <option value="all" disabled selected>Who is this message for?</option>
+                <option value="all">Everyone in Physics Club</option>
+                <option value="sponsor">Teacher Sponsor & Administrator (Ms. Becker)</option>
+                <option value="presidents">Co-presidents (Noah, Jeremy, & Megan)</option>
+                <option value="webmaster">Website developers (Benjamin & Monty)</option>
+            </select>
+        </div>
+        <div>
+            <input type="text" name="name" placeholder="Your Name" required />
+        </div>
+        <div>
+            <input type="email" name="email" placeholder="Your Email" required />
+        </div>
+        <div>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        </div>
+        <button type="submit">
+            Submit
+        </button>
+    </form>
+</div>

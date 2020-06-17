@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Install the Gems with bundler
+
+bundle install

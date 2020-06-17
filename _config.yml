@@ -1,0 +1,26 @@
+######### SITE INFORMATION ##########
+
+title: Centaurus Physics Club
+description: >- # this means to ignore newlines until "baseurl:"
+  aaa
+baseurl: "" # the subpath of your site
+url: "https://chsphysics.com"
+
+# Exclude from processing.
+# These files won't be included in site
+
+######### SITE BUILD SETTINGS & CONFIG #########
+
+collections:
+ - projects_collection
+
+exclude:
+ - .sass-cache/
+ - .jekyll-cache/
+ - gemfiles/
+ - Gemfile
+ - Gemfile.lock
+ - bundle/
+ - phpVersion
+ - README.md
+ - scripts

@@ -1,0 +1,334 @@
+/*
+ * Stylesheet for chsphys.com
+ * By Benjamin Ashbaugh & Monty King
+ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Navigation */
+a {
+    color: #ff7700;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.05em;
+    margin: 10px;
+    padding: 8px;
+    background: white;
+    border-radius: 0;
+    border: 1px solid black;
+}
+
+button:hover {
+    border: 2px solid #2d2d2d;
+    transform: translateY(-1px);
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 30px;
+    border-bottom: 1px solid black;
+    user-select: none;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 30;
+}
+
+nav .name {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: black;
+    text-decoration: none; /* Remove default underline */
+}
+
+nav .button {
+    font-family: 'Open Sans', sans-serif;
+    float: right;
+    padding: 2px;
+    margin: 0px 8px;
+    color: black;
+    text-decoration: none; /* Remove default underline */
+    border-bottom: 1px solid black;
+}
+
+nav .button:hover {
+    border-bottom: 2px solid black;
+    padding: 1px 2px; /* Reduce padding height so the navbar bottom border isn't pushed down */
+}
+
+/* Layout */
+.page-container {
+    width: 80%;
+    margin: 100px auto 0;
+    padding-bottom: 100px; /* Space for footer */
+}
+
+.centered-content {
+    text-align: center;
+    width: 60%;
+    margin: 20px auto;
+}
+@media (max-width: 700px) {
+    .centered-content {
+        width: 95%;
+    }
+}
+
+.header-image {
+    z-index: -100;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/image/cern_particle_explosion1.png");
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-text {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    padding: 100px 0px;
+    width: 100%;
+    text-align: center;
+    top: 80px;
+}
+
+.header-text p, .header-text a {
+    margin-top: 50px;
+    font-weight: 600;
+}
+
+.header-text a {
+    display: inline-block;
+    padding: 8px;
+    background: white;
+    color: black;
+    border-radius: 8px;
+}
+
+/* Content */
+.page-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.8;
+}
+
+img {
+    border-radius: 3px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.block-links a:after { /* We use :after so the whole link line isn't clickable */
+    content: "";
+    display: block;
+    height: 0;
+    width: 1px;
+}
+
+.justify-text {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.form-iframe {
+    margin: 50px 0;
+    width: 100%;
+}
+
+/* Subnav */
+
+.subnav {
+    background: #f5f5f5;
+    padding: 15px;
+    user-select: none;
+}
+@media (min-width: 801px) {
+    .subnav {
+        position: fixed;
+        top: 100px;
+        width: 15%;
+        left: 3%;
+    }
+}
+@media (max-width: 800px) {
+    .subnav {
+        position: relative;
+        margin: 20px auto;
+    }
+}
+
+.subnav a {
+    display: block;
+    margin: 5px 0;
+}
+
+/* Project Grid, Cards, and Description pop-up */
+.project-grid {
+    display: grid;
+    grid-gap: 30px 15px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.project-card {
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    border-radius: 3px;
+    box-shadow: -2px 2px 5px 2px #b8bab8;
+    text-align: center;
+
+}
+
+.project-card:hover {
+    box-shadow: -2px 2px 10px 2px #9c9c9c;
+}
+
+.project-card h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.project-card h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+    margin: 5px;
+}
+
+.project-card img {
+    border-radius: 5px;
+    width: 90%;
+    margin: 10px auto;
+}
+
+#fullscreen-overlay {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    cursor: default;
+}
+
+.dark-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.project-description {
+    font-family: 'Open Sans', sans-serif;
+    z-index: 100;
+    position: fixed;
+    top: 50px;
+    bottom: 50px;
+    overflow-y: scroll;
+    width: 70%;
+    left: 15%;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #b3b3b3;
+    display: none;
+}
+
+.close-button-x {
+    display: block;
+    text-align: left;
+    cursor: pointer;
+    color: #828282;
+    font-size: 1em;
+    text-decoration: none;
+    margin: 0;
+}
+
+.close-button-x:before {
+    content: ' x ';
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* Forms */
+form {
+    width: 70%;
+    margin: 20px auto;
+}
+@media (max-width: 800px) {
+    form {
+        width: 95%;
+    }
+}
+
+form > div {
+    margin: 30px 0;
+}
+
+form input, form textarea, form select {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    line-height: 1.2;
+    box-sizing: border-box;
+    border: 1px solid black;
+    background: white;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: #efefef;
+}
+
+footer .columns {
+    display: flex;
+}
+
+footer .columns > div {
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 15px;
+}
+
+footer .columns .footer-line {
+    display: block;
+    padding: 2px;
+}
