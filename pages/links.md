@@ -28,6 +28,7 @@ Some useful links & resources
 ## Space Plane Project Resources
 
 [Shared Space Plane Folder](https://drive.google.com/drive/folders/1itkfUPE0anoGPGpfnnr99dEDegw8AY1B?usp=sharing)
+[Team Lead Files](https://drive.google.com/drive/u/1/folders/1f0EwRmwcTG87ZKw_i9OIwFUqLelE8Weo)
 [Mesosphere Overview](https://scied.ucar.edu/shortcontent/mesosphere-overview){:target="_blank"}
 
 ## Challenges & Competitions
