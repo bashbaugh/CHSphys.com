@@ -25,20 +25,20 @@ a {
     color: #ff7700;
 }
 
-button {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.05em;
-    margin: 10px;
-    padding: 8px;
-    background: white;
-    border-radius: 0;
-    border: 1px solid black;
-}
-
-button:hover {
-    border: 2px solid #2d2d2d;
-    transform: translateY(-1px);
-}
+//button {
+//    font-family: 'Open Sans', sans-serif;
+//    font-size: 1.05em;
+//    margin: 10px;
+//    padding: 8px;
+//    background: white;
+//    border-radius: 0;
+//    border: 1px solid black;
+//}
+//
+//button:hover {
+//    border: 2px solid #2d2d2d;
+//    transform: translateY(-1px);
+//}
 
 /* Navbar */
 nav {
@@ -74,6 +74,21 @@ nav .button {
 nav .button:hover {
     border-bottom: 2px solid black;
     padding: 1px 2px; /* Reduce padding height so the navbar bottom border isn't pushed down */
+}
+
+nav .button.action {
+    border: none;
+    background: #ff8c00;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 6px 8px;
+    transform: translateY(-3px);
+    transition: 0.2s;
+}
+
+nav .button.action:hover {
+    background: #ffa616;
+    box-shadow: 0 0 6px 0 #d4d4d4;
 }
 
 /* Layout */
@@ -147,9 +162,10 @@ p {
 }
 
 img {
-    border-radius: 3px;
+    display: block;
+    border-radius: 5px;
     width: 90%;
-    margin: 20px auto;
+    margin: 40px auto;
 }
 
 .block-links a:after { /* We use :after so the whole link line isn't clickable */
