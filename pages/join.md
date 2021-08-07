@@ -2,6 +2,7 @@
 permalink: /join
 layout: content
 title: Join Physics Club!
+content_classes: vanta-waves
 ---
 
 Currently, we are working on our [space plane mesosphere research project](/projects#dawn-aerospace-mesosphere). If you are a student of Centaurus High School in Lafayette, Colorado, we would love your help! Please fill out this form to join:

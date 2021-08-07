@@ -2,6 +2,9 @@
 <script src="/js/three.r95.min.js"></script>
 <script src="/js/vanta.globe.min.js"></script>
 <script src="/js/vanta.dots.min.js"></script>
+<script src="/js/vanta.fog.min.js"></script>
+<script src="/js/vanta.waves.min.js"></script>
+<script src="/js/vanta.topology.min.js"></script>
 <script>
     VANTA.GLOBE({
         el: ".vanta-globe",
@@ -30,6 +33,47 @@
         backgroundColor: 0xffffff,
         size: 3,
         spacing: 26.00
+    })
+    VANTA.FOG({
+        el: ".vanta-fog",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        highlightColor: 0xbefff6,
+        midtoneColor: 0xc4d3fc,
+        lowlightColor: 0xdbbef5,
+        blurFactor: 0.50,
+        speed: 5.00,
+        zoom: 1.40
+    })
+    VANTA.WAVES({
+        el: ".vanta-waves",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x8a9cf2,
+        shininess: 0.00,
+        waveHeight: 27.50,
+        waveSpeed: 0.90,
+        zoom: 0.6
+    })
+    VANTA.TOPOLOGY({
+        el: ".vanta-topology",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x738c17,
+        backgroundColor: 0xffffff
     })
 </script>
 <!--End Vanta background-->

@@ -15,8 +15,6 @@ subnav:
    heading: challenges--competitions
  - title: Particle Physics
    heading: particle-physics-resources
- - title: Opportunities
-   heading: opportunities
 ---
 
 Some useful links & resources
@@ -40,7 +38,3 @@ Some useful links & resources
 
 [Cern Physics](https://home.cern/about/physics){:target="_blank"}
 [Particle Physics Timeline](https://particleadventure.org/other/history/)
-
-## Opportunities
-
-
